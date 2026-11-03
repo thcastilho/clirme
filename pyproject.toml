@@ -1,0 +1,41 @@
+[project]
+name = "clirme"
+version = "1.0.0"
+description = "ClIR.ME: self-explaining unsupervised prototype-based embeddings via projection and ranking."
+authors = [{ name="Thiago César Castilho Almeida", email="tc.almeida@unesp.br" },
+{ name="Francielle Vargas" },
+{ name="Lucas Pascotti Valem", email="lucaspascottivalem@gmail.com" },
+{ name="Daniel Carlos Guimarães Pedronette", email="pedronette@gmail.com" }]
+license = "GPL-2.0-or-later"
+license-files = ["LICENSE"]
+readme = "README.md"
+dependencies = [
+  "interpretable-embeddings>=2.0.0",
+  "numpy",
+  "tqdm",
+  "scikit-learn>=1.3",
+  "umap-learn",
+  "finch-clust",
+]
+requires-python = ">=3.10"
+keywords = ["interpretability", "prototypes", "representation learning", "dimensionality reduction", "ranking", "unsupervised learning"]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.optional-dependencies]
+faiss = ["faiss-cpu"]
+
+[project.urls]
+Homepage = "https://github.com/thcastilho/clirme"
+
+[build-system]
+requires = ["setuptools>=77.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["clirme"]
